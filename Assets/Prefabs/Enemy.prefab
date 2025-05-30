@@ -191,6 +191,7 @@ MonoBehaviour:
   animCon:
   - {fileID: 9100000, guid: c0442e4f6a895d144aa0b1598ea84f1f, type: 2}
   - {fileID: 9100000, guid: b135f6f1d7b128c4db14914c2650ff31, type: 2}
+  - {fileID: 9100000, guid: 08ba1ca40cd063b45b733d43052b43ab, type: 2}
   target: {fileID: 0}
 --- !u!114 &9151453160539373350
 MonoBehaviour:

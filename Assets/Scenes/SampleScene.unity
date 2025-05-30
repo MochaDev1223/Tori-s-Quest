@@ -783,6 +783,11 @@ MonoBehaviour:
     spriteType: 1
     health: 50
     speed: 2
+  bossData:
+    spawnTime: 0
+    spriteType: 0
+    health: 500
+    speed: 2
   levelTime: 0
   level: 0
 --- !u!1 &115308591
@@ -22390,6 +22395,7 @@ MonoBehaviour:
   - {fileID: 1819813055098808498, guid: 15b07ebfbab15334290a55e157d9011d, type: 3}
   - {fileID: 324570339974678964, guid: a256ea21574334849a1c4a8618f1ebf0, type: 3}
   - {fileID: 7041423660489058032, guid: 7cf30a10e61d24c4591671a6e41b1a2f, type: 3}
+  - {fileID: 4242030940224729370, guid: 902222a3f8731d240aaf49f2ed574adc, type: 3}
 --- !u!4 &1506337883
 Transform:
   m_ObjectHideFlags: 0
