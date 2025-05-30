@@ -23,7 +23,12 @@ public class Spawner : MonoBehaviour
             return;
 
         timer += Time.deltaTime;
-        level = Mathf.Min(Mathf.FloorToInt(GameManager.instance.gameTime / levelTime), spawnData.Length - 1);
+        // 몬스터가 전체 게임 시간에 몬스터 수 만큼 나옴
+        // level = Mathf.Min(Mathf.FloorToInt(GameManager.instance.gameTime / levelTime), spawnData.Length - 1);
+        // 새 코드
+        int cycleTime = 5; // 몬스터가 바뀌는 주기(초)
+        level = (int)(GameManager.instance.gameTime / cycleTime) % spawnData.Length;
+
 
         if (timer > spawnData[level].spawnTime)
         {

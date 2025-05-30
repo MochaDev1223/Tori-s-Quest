@@ -775,13 +775,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPoint: []
   spawnData:
-  - spawnTime: 0.8
+  - spawnTime: 0.7
     spriteType: 0
-    health: 10
-    speed: 2
-  - spawnTime: 0.5
+    health: 30
+    speed: 2.2
+  - spawnTime: 0.3
     spriteType: 1
-    health: 10
+    health: 50
     speed: 2
   levelTime: 0
   level: 0
