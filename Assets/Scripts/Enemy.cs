@@ -13,6 +13,8 @@ public class Enemy : MonoBehaviour
     public Rigidbody2D target;
     bool isLive;
     bool isKnockback;
+    bool isBoss;
+
 
     Rigidbody2D rigid;
     Collider2D coll;
@@ -71,6 +73,9 @@ public class Enemy : MonoBehaviour
         speed = data.speed;
         maxHealth = data.health;
         health = data.health;
+
+        // 보스 여부 저장 (필요 시)
+        isBoss = data.isBoss;
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -97,8 +102,17 @@ public class Enemy : MonoBehaviour
             rigid.simulated = false;
             spriter.sortingOrder = 1;
             anim.SetBool("Dead", true);
-            GameManager.instance.kill++;
-            GameManager.instance.GetExp();
+            if (isBoss)
+            {
+                GameManager.instance.bossDefeated = true;
+                GameManager.instance.GameVictory(); // 보스 처치 시 즉시 승리
+            }
+            else
+            {
+                GameManager.instance.kill++;
+                GameManager.instance.GetExp();
+            }
+
         }
     }
 

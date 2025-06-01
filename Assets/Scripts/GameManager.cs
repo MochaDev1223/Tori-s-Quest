@@ -23,6 +23,8 @@ public class GameManager : MonoBehaviour
     public LevelUp uiLevelUp;
     public Result uiResult;
     public GameObject enemyCleaner;
+    public bool bossDefeated = false;
+
 
     void Awake()
     {
@@ -83,7 +85,10 @@ public class GameManager : MonoBehaviour
         if (gameTime > maxGameTime)
         {
             gameTime = maxGameTime;
-            GameVictory();
+            if (bossDefeated)
+                GameVictory();
+            else
+                GameOver();
         }
     }
 
